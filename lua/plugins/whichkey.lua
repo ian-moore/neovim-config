@@ -1,4 +1,4 @@
-local picker = require('snacks.picker')
+local picker = require("snacks.picker")
 
 return {
   "folke/which-key.nvim",
@@ -78,9 +78,10 @@ return {
     {
       "<leader>x",
       ":lua<CR>",
-      desc = "Lua eval lhighlighted text",
+      desc = "Lua eval highlighted text",
       mode = { "v" },
     },
+
     -- Grep
     {
       "<leader>sb",
@@ -110,6 +111,38 @@ return {
       end,
       desc = "Visual selection or word",
       mode = { "n", "x" },
+    },
+    {
+      "<leader>sk",
+      function()
+        Snacks.picker.keymaps()
+      end,
+      desc = "Keymaps",
+    },
+
+    -- Help
+    {
+      "<leader>sh",
+      function()
+        Snacks.picker.help()
+      end,
+      desc = "Help Pages",
+    },
+
+    -- Git
+    {
+      "<leader>gl",
+      function()
+        Snacks.picker.git_log()
+      end,
+      desc = "Git Log",
+    },
+    {
+      "<leader>gs",
+      function()
+        Snacks.picker.git_status()
+      end,
+      desc = "Git Status",
     },
   },
 }
